@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Yaml Formatter</title>
+    <style type="text/css">
+    .container {
+        max-width: 1260px;
+        margin: 0 auto;
+    }
+    #header {
+        height: 300px;
+    }
+    #input, #output {
+        width: 100%;
+        height: 400px;
+        max-height: 700px;
+    }
+    .left {
+        width: 40%;
+        float: left;
+    }
+    .middle {
+        width: 20%;
+        float:left;
+    }
+    .right {
+        width: 40%;
+        float: left;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            header
+        </div>
+        <div class="content">
+            <div class="left">
+                <textarea id="input">paste:
+  your:
+    - yaml
+    - here</textarea>
+            </div>
+
+
+            <div class="middle">
+                Detected indentation: <span id="detected-indentation"></span>
+                <button id="format">Format</button>
+                  Output indentation:<input id="output-indentation" type="number" name="output_indentation" min="0" value="4">
+            </div>
+
+
+            <div class="right">
+                <textarea id="output"></textarea>
+            </div>
+        </div>  
+  <!-- Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</div>
+</body>
+</html>
